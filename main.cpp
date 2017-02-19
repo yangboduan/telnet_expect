@@ -36,7 +36,22 @@ int main(){
     }
    
 //LOGIN-MODE:Telnet  (username-password-superpassword or password-superpassword)
+//Switch Model:WS-C3550-48-SMI 
+//image file  :c3550-ipservicesk9-mz.122-50.SE3.bin
 
+/*------------------------------------
+User Access Verification
+
+Username: admin
+Password:
+Switch>enable
+Password:
+Switch#wr
+Building configuration...
+[OK]
+Switch#
+
+*/
 
 
       
@@ -121,5 +136,7 @@ int main(){
                     break;
 	    }
     }
+
+    
     Tcl_DeleteInterp(tcl);  
 }  

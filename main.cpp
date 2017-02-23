@@ -1,6 +1,5 @@
 /*
 filename      : main.cpp
-description :????????
 */
 #include "switchexpect.h"
 Tcl_Interp *tcl;  

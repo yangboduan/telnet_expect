@@ -63,7 +63,8 @@ int expect_cisco_enable_password(int fd, int result,char enable_passwd[]){
     while(loop){ 
         result = exp_expectl(fd,
                              exp_glob, "*>", 1, 
-                             exp_glob, "Password:*", 2, 
+                             exp_glob, "Password:*", 2,
+                             exp_glob,"Login invalid",3, 
                              exp_exact, "Connection closed by foreign host.", 7, 
                              exp_end); 
         switch(result){  
@@ -73,6 +74,9 @@ int expect_cisco_enable_password(int fd, int result,char enable_passwd[]){
                 case 2:  
                     write(fd, enable_passwd, strlen(enable_passwd));
 		    loop = 0;
+                    break;  
+                case 3:
+		    cout <<"password wrong";
                     break;  
                 case 7:  
                     cout <<"enable password Incorrect username or password;"<<endl; 

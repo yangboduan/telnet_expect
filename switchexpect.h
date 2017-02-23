@@ -10,3 +10,4 @@ int expect_cisco_password(int fd,int result, char passwd[]);
 int expect_cisco_enable_password(int fd, int result,char enable_passwd[]);
 int expect_save_config_cmd(int fd, int result);
 int expect_test_cmd(int fd, int result);
+int expect_end_cmd(int fd, int result);

@@ -32,9 +32,8 @@ int main(){
     expect_cisco_password( fd,result,passwd);
     expect_cisco_enable_password( fd,result,enable_passwd);
     expect_save_config_cmd( fd, result);
-
-    //sleep(10);
     expect_test_cmd(fd, result);
+    expect_end_cmd(fd, result);
       Tcl_DeleteInterp(tcl);  
 }  
 
